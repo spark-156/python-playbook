@@ -9,8 +9,8 @@ class surfshopTest(unittest.TestCase):
   
   def test_addsurfboards(self):
     for quantity in [2, 1, 4]:
-      print(quantity)
       with self.subTest(quantity=quantity):
+        self.setUp()
         suffix = '' if quantity == 1 else 's'
         message = f'Successfully added {quantity} surfboard{suffix} to cart!'
         self.assertEqual(self.cart.add_surfboards(quantity), message)
