@@ -8,7 +8,7 @@ class surfshopTest(unittest.TestCase):
     self.cart = ShoppingCart()
   
   def test_addsurfboards(self):
-    for quantity in [2, 1, 4]:
+    for quantity in range(5):
       with self.subTest(quantity=quantity):
         self.setUp()
         suffix = '' if quantity == 1 else 's'
